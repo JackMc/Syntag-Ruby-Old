@@ -1,0 +1,12 @@
+<h1>
+  New Language
+</h1>
+
+<%= form_for [:admin, @language] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :highlighter_name %>
+  <%= f.text_field :highlighter_name %>
+
+  <%= f.submit %>
+<% end %>

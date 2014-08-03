@@ -1,0 +1,17 @@
+<%= form_for @snippet do |f| %>
+  <p>
+  <%= f.label  :title %>
+  <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :language_id %>
+    <%= collection_select :snippet, :language_id, Language.all.order('name'), :id, :name %>
+  </p>
+  
+  <p>
+  <%= f.label  :contents %>
+  <%= f.text_area :contents %>
+  </p>
+  <%= f.submit %>
+<% end %>
