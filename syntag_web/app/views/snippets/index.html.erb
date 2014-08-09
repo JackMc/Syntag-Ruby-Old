@@ -5,8 +5,9 @@ Pick a snippet!
 </p>
 
 <p>
-  <%= collection_select :snippet, :snippet_id, Snippet.all.order('title'), :id, :title, {}, {:onchange => 'snippet_changed()'} %>
+  <%= collection_select :snippet, :snippet_id, Snippet.all.order('title'), :id, :title, {}, {:id => "snippet_select"} %>
 </p>
 
 <!-- Will be filled in with ajax. -->
-<div id="snippet"> </div>
+<div><pre id="lang"></pre></div>
+<div><pre id="snippet" class="prettyprint"> </pre></div>

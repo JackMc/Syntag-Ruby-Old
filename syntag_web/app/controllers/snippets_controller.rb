@@ -7,7 +7,7 @@ class SnippetsController < ApplicationController
       format.json { render json: @snippets }
     end
   end
-  
+
   def new
     @snippet = Snippet.new
   end
@@ -16,11 +16,11 @@ class SnippetsController < ApplicationController
     @snippet = Snippet.find(params[:id])
 
     respond_to do |format|
-      format.html
+      format.html { render plain: @snippet.contents }
       format.json { render json: @snippet }
     end
   end
-  
+
   def create
     @snippet = Snippet.new
 
