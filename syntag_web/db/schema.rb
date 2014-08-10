@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20140803015916) do
   create_table "languages", force: true do |t|
     t.string   "name"
     t.string   "highlighter_name"
+    t.string   "code_editor_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

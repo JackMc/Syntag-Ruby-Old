@@ -3,10 +3,20 @@
 </h1>
 
 <%= form_for [:admin, @language] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :highlighter_name %>
-  <%= f.text_field :highlighter_name %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <%= f.label :highlighter_name %>
+    <%= f.text_field :highlighter_name %>
+  </p>
+
+  <p>
+    <%= f.label :code_editor_name %>
+    <%= f.text_field :code_editor_name %>
+  </p>
 
   <%= f.submit %>
 <% end %>
