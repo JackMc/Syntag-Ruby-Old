@@ -1,10 +1,18 @@
+ruby '2.1.2'
 source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
+
+# Use PostgreSQL as a database
 gem 'pg'
+
+# Use Thin as a web server
 gem 'thin'
+
+# Rails 12 factor for Heroku compliance
+gem 'rails_12factor'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
