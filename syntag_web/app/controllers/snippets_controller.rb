@@ -21,6 +21,16 @@ class SnippetsController < ApplicationController
     end
   end
 
+  def update
+    @snippet = Snippet.find(params[:id])
+
+    @snippet.title = params[:snippet][:title]
+    @snippet.contents = params[:snippet][:contents]
+    @snippet.language_id = params[:snippet][:language_id]
+
+    @snippet.save
+  end
+
   def create
     @snippet = Snippet.new
 

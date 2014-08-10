@@ -1,11 +1,11 @@
-.CodeMirror {
+p.snippet_edit div.CodeMirror {
     height: auto;
     width: 40%;
     border: solid;
     border-width: 1px;
 }
 
-.CodeMirror-scroll {
+p.snippet_edit div.CodeMirror div.CodeMirror-scroll {
     min-height: 200px;
     overflow-x: auto;
     overflow-y: hidden;

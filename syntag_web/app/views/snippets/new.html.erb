@@ -9,10 +9,11 @@
     <%= collection_select :snippet, :language_id, Language.all.order('name'), :id, :name %>
   </p>
   
-  <p>
+  <p class="snippet_edit">
   <%= f.label  :contents %>
   
   <%= f.text_area :contents %>
   </p>
+  
   <%= f.submit %>
 <% end %>

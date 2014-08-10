@@ -25,11 +25,21 @@ class Admin::LanguagesController < ApplicationController
     end
   end
 
+  def update
+    @language = Language.find(params[:id])
+
+    @language.name = params[:language][:name]
+    @language.code_editor_name = params[:language][:code_editor_name]
+    @language.save
+
+    render 'new'
+  end
+
   def create
     @language = Language.new
     
     @language.name = params[:language][:name]
-    @language.highlighter_name = params[:language][:highlighter_name]
+    @language.code_editor_name = params[:language][:code_editor_name]
     @language.save
 
     @message = "Successfully created language #{params[:language][:name]}"
