@@ -6,6 +6,7 @@ Pick a snippet!
 
 <p>
   <%= collection_select :snippet, :snippet_id, Snippet.all.order('title'), :id, :title, {}, {:id => "snippet_select"} %>
+  <%= link_to "Want to add a snippet?", action: 'new' %>
 </p>
 
 <!-- Will be filled in with ajax. -->
