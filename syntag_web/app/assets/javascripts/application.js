@@ -14,5 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require codemirror
-//= require codemirror/modes/ruby
 //= require_tree .
