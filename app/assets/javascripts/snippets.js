@@ -33,7 +33,7 @@ $(document).on("page:change", function () {
 	function download_selected_snippet() {
 	    $.ajax("/snippets/" + $("#snippet_select").val() + ".json").done(function (json_snip) {
 		editor.getDoc().setValue(json_snip["contents"])
-		set_language($("#snippet_select").val())
+		set_language(json_snip['language_id'])
 	    })
 	}
 
