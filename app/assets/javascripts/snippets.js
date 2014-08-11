@@ -42,6 +42,7 @@ $(document).on("page:change", function () {
 	if ($(".CodeMirror").length === 0) {
 	    editor = CodeMirror.fromTextArea($("#snippet")[0], {
 		lineNumbers: false,
+		readOnly: true,
 	    })
 	}
 	
