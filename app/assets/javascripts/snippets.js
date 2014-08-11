@@ -16,10 +16,9 @@ $(document).on("page:change", function () {
 	}
 	else {
 	    $.ajax("/admin/languages/" + lang_id + ".json").done(function (json_lang) {
-		$("head").append($("<script src=\"/assets/codemirror/modes/" + json_lang["code_editor_name"] + ".js\"></script>"))
-		downloaded[json_lang["id"]] = json_lang["code_editor_name"]
-
 		code_editor_name = json_lang["code_editor_name"]
+		$("head").append($("<script src=\"/assets_static/codemirror/mode/" + code_editor_name + "/" + code_editor_name + ".js\"></script>"))
+		downloaded[json_lang["id"]] = json_lang["code_editor_name"]
 
 		if (editor != null) {
 		    editor.setOption("mode", code_editor_name)

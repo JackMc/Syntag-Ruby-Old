@@ -48,4 +48,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 # Use CodeMirror editor
-gem 'codemirror-rails'
+#gem 'codemirror-rails'
