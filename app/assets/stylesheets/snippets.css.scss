@@ -1,5 +1,13 @@
-p.snippet_edit div.CodeMirror {
+.CodeMirror {
     height: auto;
+}
+
+.CodeMirror-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+p.snippet_edit div.CodeMirror {
     width: 40%;
     border: solid;
     border-width: 1px;
@@ -7,7 +15,5 @@ p.snippet_edit div.CodeMirror {
 
 p.snippet_edit div.CodeMirror div.CodeMirror-scroll {
     min-height: 200px;
-    overflow-x: auto;
-    overflow-y: hidden;
     cursor: text;
 }
